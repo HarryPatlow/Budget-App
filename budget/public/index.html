@@ -14,6 +14,74 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    <style>
+        .scale-up-ver-top {
+          -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                  animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+        @-webkit-keyframes scale-up-ver-top {
+          0% {
+            -webkit-transform: scaleY(0);
+                    transform: scaleY(0);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+          100% {
+            -webkit-transform: scaleY(1);
+                    transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+        }
+        @keyframes scale-up-ver-top {
+          0% {
+            -webkit-transform: scaleY(0);
+                    transform: scaleY(0);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+          100% {
+            -webkit-transform: scaleY(1);
+                    transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+        }
+
+        .scale-down-ver-top {
+          -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                  animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+        @-webkit-keyframes scale-down-ver-top {
+          0% {
+            -webkit-transform: scaleY(1);
+                    transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+          100% {
+            -webkit-transform: scaleY(0);
+                    transform: scaleY(0);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+        }
+        @keyframes scale-down-ver-top {
+          0% {
+            -webkit-transform: scaleY(1);
+                    transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+          100% {
+            -webkit-transform: scaleY(0);
+                    transform: scaleY(0);
+            -webkit-transform-origin: 100% 0%;
+                    transform-origin: 100% 0%;
+          }
+        }
+
+    </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -24,10 +92,91 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div class="min-h-full">
+  <nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">All Budgets</a>
+
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Budget</a>
+
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center md:ml-6">
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Heroicon name: outline/menu
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" id="dropdown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Heroicon name: outline/x
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+      </div>
+    </div>
+  </nav>
+
+</div>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -40,4 +189,16 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      var dropdown = document.querySelector("#mobile-menu")
+      document.querySelector("#dropdown").onclick = () => {
+        if (dropdown.className == "hidden"){
+          dropdown.className = 'scale-up-ver-top'
+        } else {
+          dropdown.className = 'hidden';
+        }
+      }
+    })
+  </script>
 </html>
