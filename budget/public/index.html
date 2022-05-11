@@ -49,8 +49,8 @@
         }
 
         .scale-down-ver-top {
-          -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                  animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          -webkit-animation: scale-down-ver-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                  animation: scale-down-ver-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
         @-webkit-keyframes scale-down-ver-top {
           0% {
@@ -80,6 +80,7 @@
                     transform-origin: 100% 0%;
           }
         }
+
 
     </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -122,10 +123,6 @@
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">All Budgets</a>
 
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Budget</a>
-
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
-
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
             </div>
           </div>
         </div>
@@ -159,25 +156,22 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+    <div id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" id="menu">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="#" id="dash-mob" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+        <a href="#" id="all-mob" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">All Budgets</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+        <a href="#" id="new-mob" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Budget</a>
       </div>
     </div>
   </nav>
 
 </div>
 
-    <div id="root"></div>
+    <div id="root">
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -189,16 +183,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-      var dropdown = document.querySelector("#mobile-menu")
-      document.querySelector("#dropdown").onclick = () => {
-        if (dropdown.className == "hidden"){
-          dropdown.className = 'scale-up-ver-top'
-        } else {
-          dropdown.className = 'hidden';
-        }
-      }
-    })
-  </script>
 </html>
