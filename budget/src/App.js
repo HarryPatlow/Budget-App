@@ -10,11 +10,10 @@ function App() {
   // var allmob = document.querySelector("#all-mob");
   // var newbudmob = document.querySelector("#new-mob");
 
-  var [contentMob, setContentMob] = useState(<Dashboard/>)
-  var [content, setContent] = useState(<Dashboard/>)
+  var [content, setContent] = useState(<NewBudgets/>)
 
-  var [DashActive, setDashActive] = useState("active")
-  var [NewActive, setNewActive] = useState("inactive")
+  var [DashActive, setDashActive] = useState("inactive")
+  var [NewActive, setNewActive] = useState("active")
   var [AllActive, setAllActive] = useState("inactive")
   return(
     <>
@@ -27,7 +26,7 @@ function App() {
             <img className="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"></img>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-stretch space-x-4">
               
               <button onClick={()=>{
                 setContent(<Dashboard/>)
@@ -35,7 +34,7 @@ function App() {
                 setNewActive('inactive')
                 setAllActive('inactive')
                 }
-              } className={DashActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} aria-current="page">Dashboard</button>
+              } className={DashActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} aria-current="page">Dashboard</button>
 
               <button onClick={()=>{
                 setContent(<NewBudgets/>)
@@ -43,7 +42,7 @@ function App() {
                 setNewActive('active')
                 setAllActive('inactive')
                 }
-              } className={NewActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} >New Budget</button>
+              } className={NewActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} >New Entry</button>
 
               <button onClick={()=>{
                 setContent(<AllBudgets/>)
@@ -51,7 +50,7 @@ function App() {
                 setNewActive('inactive')
                 setAllActive('active')
                 }
-              } className={AllActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"}>All Budgets</button>
+              } className={AllActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"}>All Budgets</button>
             </div>
           </div>
         </div>
@@ -80,7 +79,7 @@ function App() {
         setNewActive('inactive')
         setAllActive('inactive')
         }
-      } className={DashActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} aria-current="page">Dashboard</button>
+      } className={DashActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "mx-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} aria-current="page">Dashboard</button>
 
       <button onClick={()=>{
         setContent(<NewBudgets/>)
@@ -88,7 +87,7 @@ function App() {
         setNewActive('active')
         setAllActive('inactive')
         }
-      } className={NewActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} >New Budget</button>
+      } className={NewActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "mx-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} >New Entry</button>
 
       <button onClick={()=>{
         setContent(<AllBudgets/>)
@@ -96,7 +95,7 @@ function App() {
         setNewActive('inactive')
         setAllActive('active')
         }
-      } className={AllActive==='active'? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"}>All Budgets</button>
+      } className={AllActive==='active'? "mx-1 bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "mx-1 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"}>All Budgets</button>
       </div>
     </div>
   </nav>
