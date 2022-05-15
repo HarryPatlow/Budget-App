@@ -9,7 +9,7 @@ function NewBudgets(){
         <>
             <header className="bg-white shadow">
                 <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center">
-                    <img src={process.env.PUBLIC_URL+"imgs/"+icon} alt='badge' className='w-6 m-2 rounded-full'/>
+                    <img src={icon} alt='badge' className='w-6 m-2 rounded-full'/>
                     <h1 className="text-2xl font-bold text-gray-600" contentEditable='true' placeholder='New Budget'>Budget name</h1>
                 </div>
             </header>
@@ -21,7 +21,7 @@ function NewBudgets(){
                             <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
                             <select id="category" onChange={(e) => iconChange(e)} name="category" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm md:w-72">
                                 <option value="games.png">Entertainment</option>
-                                <option value="edu.png">Education</option>
+                                <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/edu.png">Education</option>
                                 <option value="food.png">Food</option>
                                 <option value="transport.png">Transport</option>
                                 <option value="house.png">Housing</option>
