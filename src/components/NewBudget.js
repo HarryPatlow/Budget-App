@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function NewBudgets(){
-    var [icon,setIcon] = useState("https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/games.png")
+    var [icon,setIcon] = useState("https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/Earning.png")
     const iconChange = (e) =>{
         setIcon(e.target.value)
     }
@@ -20,7 +20,7 @@ function NewBudgets(){
                         <div className='mt-2'>
                             <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
                             <select id="category" onChange={(e) => iconChange(e)} name="category" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm md:w-72">
-                            <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/personal.png">Earning</option>
+                            <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/Earning.png">Earning</option>
                                 <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/games.png">Entertainment</option>
                                 <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/edu.png">Education</option>
                                 <option value="https://raw.githubusercontent.com/HarryPatlow/Budget-App/master/public/imgs/food.png">Food</option>
